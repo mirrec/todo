@@ -27,7 +27,20 @@ gem "jquery-rails"
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
+group :development do
+	# gem 'guard'
+	# 	gem 'guard-rspec'
+	# 	gem 'guard-bundler'
+	# 
+	# 	if RUBY_PLATFORM.downcase.include?("darwin")
+	# 		gem 'rb-fsevent'
+	# 		gem 'growl' # also install growlnotify from the Extras/growlnotify/growlnotify.pkg in Growl disk image
+	# 	end
+end
+
+gem "growl"
 gem "rspec-rails", :group => [:test, :development]
+
 group :test do
   gem "factory_girl_rails"
   gem "capybara"
